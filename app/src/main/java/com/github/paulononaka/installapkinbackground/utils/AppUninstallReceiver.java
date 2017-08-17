@@ -26,7 +26,7 @@ public class AppUninstallReceiver extends BroadcastReceiver {
         handler.post(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(MyApplication.context, "Application has been uninstalled", Toast.LENGTH_LONG).show();
+                Toast.makeText(MyApplication.getContext(), "Application has been uninstalled", Toast.LENGTH_LONG).show();
             }
         });
     }

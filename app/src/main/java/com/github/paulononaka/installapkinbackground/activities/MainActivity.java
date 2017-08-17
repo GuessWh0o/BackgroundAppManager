@@ -19,6 +19,7 @@ public class MainActivity extends Activity {
     public static final String TAG = "MainActivity";
     Button btnInstall;
     Button btnUninstall;
+    Button btnTestAmazon;
     AppInstalledReceiver appInstalledReceiver;
     AppUninstallReceiver appUninstallReceiver;
 
@@ -29,6 +30,8 @@ public class MainActivity extends Activity {
 
         btnInstall = (Button) findViewById(R.id.btnInstall);
         btnUninstall = (Button) findViewById(R.id.btnUninstall);
+        btnTestAmazon = (Button) findViewById(R.id.btnTestAmazon);
+
 
         registerAppInstallReceiver();
         registerAppUninstallReceiver();
@@ -74,6 +77,19 @@ public class MainActivity extends Activity {
                 }
             });
 
+            btnTestAmazon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View arg0) {
+
+                    try {
+                        runTestAmazonActivity();
+                    } catch (Exception e) {
+                        logError(e);
+                    }
+                }
+            });
+
+
 
         } catch (Exception e) {
             logError(e);
@@ -86,6 +102,10 @@ public class MainActivity extends Activity {
 
     private void runUninstallActivity() {
         startActivity(new Intent(MainActivity.this, UninstallActivity.class));
+    }
+
+    private void runTestAmazonActivity() {
+        startActivity(new Intent(MainActivity.this, ActivityTestAmazon.class));
     }
 
     private void registerAppInstallReceiver() {

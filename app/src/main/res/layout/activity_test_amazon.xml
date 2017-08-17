@@ -1,39 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorGrey"
-    android:weightSum="3">
+    android:weightSum="2">
+
 
     <Button
-        android:id="@+id/btnTestAmazon"
+        android:id="@+id/btnUploadToS3"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:layout_weight="1"
         android:background="#09b5ff"
-        android:text="Test AMAZON" />
+        android:text="Upload file to s3" />
 
     <Button
-        android:id="@+id/btnInstall"
+        android:id="@+id/btnDownloadFromS3"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:layout_weight="1"
         android:background="@color/colorGreen"
-        android:text="Install" />
+        android:text="download file from s3" />
 
 
-    <Button
-        android:id="@+id/btnUninstall"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:layout_weight="1"
-        android:background="@color/colorAccent"
-        android:text="Uninstall" />
 </LinearLayout>

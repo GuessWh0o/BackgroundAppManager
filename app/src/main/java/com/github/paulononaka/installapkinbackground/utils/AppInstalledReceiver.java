@@ -26,7 +26,7 @@ public class AppInstalledReceiver extends BroadcastReceiver {
         handler.post(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(MyApplication.context, "Application has been installed", Toast.LENGTH_LONG).show();
+                Toast.makeText(MyApplication.getContext(), "Application has been installed", Toast.LENGTH_LONG).show();
             }
         });
     }
