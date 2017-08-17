@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorGreen">#04b900</color>
+    <color name="colorGrey">#484848</color>
+
+    <color name="background">#ffffffff</color>
+    <color name="text_list">#ff212121</color>
+    <color name="text_detail_header">#ff212121</color>
+    <color name="text_detail_body">#ff424242</color>
+    <color name="primary">#ff3f51b5</color>
+    <color name="primary_dark">#ff303f9f</color>
+    <color name="accent">#ffe91e63</color>
+    <color name="text_color_primary">#ffffffff</color>
+    <color name="text_list_header">@color/accent</color>
+    <color name="text_start">#ff757575</color>
+    <color name="text_dialog_title">@color/primary</color>
+    <color name="text_license">#ff212121</color>
+    <color name="edit_text_highlight">#ff9fa8da</color>
+
+</resources>

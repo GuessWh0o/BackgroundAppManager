@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">InstallAPKinBackground</string>
+    <string name="app_icon">App Icon</string>
+    <string name="application_name">Application Name</string>
+    <string name="refresh">Refresh</string>
+
+
+    <!-- Error messages -->
+    <string name="error_file_entry_empty">Invalid file entry.</string>
+    <string name="error_file_entry_url_required">URL is required.</string>
+    <string name="error_no_connected_network">Not connected to network.</string>
+    <string name="error_download">Download failed!</string>
+    <string name="error_not_found">File not found</string>
+    <string name="error_unauthorized">Unauthorized</string>
+    <string name="error_unknown_host">Unknown host</string>
+
+
+    <string name="activity_title_detail">Detail of the app</string>
+    <string name="activity_title_add_app">Add new app</string>
+    <string name="activity_title_edit_app">Edit the app</string>
+    <string name="activity_title_help">Help</string>
+    <string name="activity_title_settings">Settings</string>
+    <string name="activity_title_about">About this app</string>
+    <string name="activity_title_license">License</string>
+    <string name="action_reload">Reload</string>
+    <string name="action_add_app">@string/activity_title_add_app</string>
+    <string name="action_help">@string/activity_title_help</string>
+    <string name="action_settings">@string/activity_title_settings</string>
+    <string name="action_edit">Edit</string>
+    <string name="label_name">Name</string>
+    <string name="label_url">URL</string>
+    <string name="label_basic_auth_user">Basic Auth User (Optional)</string>
+    <string name="label_basic_auth_password">Basic Auth Password (Optional)</string>
+    <string name="label_add_app_empty">+ Add new app</string>
+    <string name="label_install">Install</string>
+    <string name="label_save">Save</string>
+    <string name="label_show_password">Show password</string>
+    <string name="label_delete">Delete</string>
+    <string name="label_basic_usage">Basic usage</string>
+    <string name="label_for_testers">For testers</string>
+    <string name="label_for_developers">For developers</string>
+    <string name="label_permission_required">Permission required</string>
+    <string name="label_permission_required_description">This operation is restricted by administrator.</string>
+    <string name="label_admin_password">Administrator\'s password</string>
+    <string name="label_current_password">Current password</string>
+    <string name="label_new_password">New password</string>
+    <string name="label_retype_password">Retype password</string>
+    <string name="label_version">Version</string>
+</resources>
