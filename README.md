@@ -2,12 +2,13 @@
 
 This is improvement Version of [paulononaka/Android-InstallInBackgroundSample](https://github.com/paulononaka/Android-InstallInBackgroundSample)
 
-## Changes by ME
+## Changes by ME (https://github.com/GuessWh0o)
 
 - Listing installed apps
 - Added option to uninstall app in background
+- Downloading apks from Amazon S3
 
-// In progress "Downloading and Installing Apk from the internet.
+// In progress "Downloading and Installing Apk from any link.
 
 ## Changes by WindSekirun
 
