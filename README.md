@@ -20,3 +20,20 @@ This is improvement Version of [paulononaka/Android-InstallInBackgroundSample](h
 
 I'm not owner of this code. if you have any issue of this code, please notice to @paulononaka , not me.
 and, I follow owner's license policy.
+
+
+***
+
+### Amazon S3 Activity
+
+<img src="app/src/main/res/screenshots/screenshot_amazon.png" width="384" height="640">
+
+***
+
+***
+
+### Uninstall Activity
+
+<img src="app/src/main/res/screenshots/screenshot_uninstall.png" width="384" height="640">
+
+***
