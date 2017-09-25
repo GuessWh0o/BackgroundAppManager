@@ -8,6 +8,8 @@ import android.net.Uri;
 import android.os.RemoteException;
 import android.util.Log;
 
+import com.github.paulononaka.installapkinbackground.interfaces.OnInstalledPackaged;
+
 import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

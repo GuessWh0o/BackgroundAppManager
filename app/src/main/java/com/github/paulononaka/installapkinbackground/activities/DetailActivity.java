@@ -10,25 +10,24 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.paulononaka.installapkinbackground.utils.InstallTask;
 import com.github.paulononaka.installapkinbackground.R;
-import com.github.paulononaka.installapkinbackground.utils.AppDownloader;
 import com.github.paulononaka.installapkinbackground.utils.FileEntry;
+import com.github.paulononaka.installapkinbackground.utils.MyInternetInfo;
 
 /**
  * Created by Maks on 8/10/2017.
  */
 
-public class DetailActivity extends AppCompatActivity implements InstallTask.InstallListener {
+public class DetailActivity extends AppCompatActivity {
 
-        public static final String EXTRA_FILE_ENTRY = "fileEntry";
-        protected FileEntry mFileEntry;
+    public static final String EXTRA_FILE_ENTRY = "fileEntry";
+    protected FileEntry mFileEntry;
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            init();
-        }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        init();
+    }
 
     protected void init() {
         setContentView(R.layout.activity_detail);
@@ -49,23 +48,6 @@ public class DetailActivity extends AppCompatActivity implements InstallTask.Ins
         });
     }
 
-
-    @Override
-    public void onComplete(final AppDownloader.DownloadResponse response) {
-        if (response == null) {
-            Toast.makeText(this, R.string.error_download, Toast.LENGTH_SHORT).show();
-            return;
-        } else if (!TextUtils.isEmpty(response.errorMessage)) {
-            Toast.makeText(this, response.errorMessage, Toast.LENGTH_SHORT).show();
-            return;
-        } else if (TextUtils.isEmpty(response.downloadedApkPath)) {
-            Toast.makeText(this, R.string.error_download, Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-//TODO:          InstallUtils.delegateInstall(this, response.downloadedApkPath);
-    }
-
     protected void restoreValues(FileEntry entry) {
         ((TextView) findViewById(R.id.name)).setText(entry.name);
         ((TextView) findViewById(R.id.url)).setText(entry.url);
@@ -78,15 +60,9 @@ public class DetailActivity extends AppCompatActivity implements InstallTask.Ins
             entry.basicAuthUser = storedEntry.basicAuthUser;
             entry.basicAuthPassword = storedEntry.basicAuthPassword;
         }
-//TODO:  //        FileEntryValidator validator = new FileEntryValidator(this, entry);
-//        if (!validator.isValid()) {
-//            Toast.makeText(this, validator.getErrors(), Toast.LENGTH_SHORT).show();
-//            return;
-//        }
 
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = cm.getActiveNetworkInfo();
-        if (networkInfo == null || !networkInfo.isConnectedOrConnecting()) {
+        MyInternetInfo networkInfo = new MyInternetInfo(this);
+        if (!networkInfo.isNetworkAvailable()) {
             Toast.makeText(this, R.string.error_no_connected_network, Toast.LENGTH_SHORT).show();
             return;
         }
@@ -94,20 +70,6 @@ public class DetailActivity extends AppCompatActivity implements InstallTask.Ins
         if (TextUtils.isEmpty(entry.name)) {
             entry.name = entry.url;
         }
-
-        // Save name and url
-//TODO:  //        if (mFileEntry == null || mFileEntry.id == 0) {
-//            // Create
-//            new FileEntryDao(this).create(entry);
-//        } else {
-//            // Update
-//            new FileEntryDao(this).update(entry);
-//        }
-
-        //TODO:       Toast.makeText(this, R.string.msg_installing, Toast.LENGTH_LONG).show();
-        InstallTask task = new InstallTask(this, entry);
-        task.setListener(this);
-        task.execute(entry.url);
     }
 
     protected FileEntry getFileEntryFromScreen() {

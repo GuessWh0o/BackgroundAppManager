@@ -8,13 +8,13 @@ import android.util.Log;
  * Created by Maks on 8/17/2017.
  */
 
-public class NetworkInfo {
+public class MyInternetInfo {
     private Context context;
-    private static final String TAG = "NetworkInfo";
+    private static final String TAG = "MyInternetInfo";
     private static String className;
 
 
-    public NetworkInfo(Context context) {
+    public MyInternetInfo(Context context) {
         this.context = context.getApplicationContext();
         className = this.getClass().getSimpleName();
     }

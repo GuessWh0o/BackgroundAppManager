@@ -38,52 +38,11 @@
             android:inputType="textUri"
             android:maxLines="1" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/label_basic_auth_user" />
-
-        <EditText
-            android:id="@+id/basicAuthUser"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:maxLines="1" />
-
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/label_basic_auth_password" />
-
-        <EditText
-            android:id="@+id/basicAuthPassword"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text|textPassword"
-            android:maxLines="1" />
-
         <Button
             android:id="@+id/install"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/label_install" />
 
-        <Button
-            android:id="@+id/save"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/label_save" />
-
-        <Button
-            android:id="@+id/show_password"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/label_show_password" />
-
-        <Button
-            android:id="@+id/delete"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/label_delete" />
-    </LinearLayout>
+     </LinearLayout>
 </ScrollView>

@@ -10,16 +10,16 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.github.paulononaka.installapkinbackground.ApplicationManager;
-import com.github.paulononaka.installapkinbackground.OnInstalledPackaged;
+import com.github.paulononaka.installapkinbackground.interfaces.OnInstalledPackaged;
 import com.github.paulononaka.installapkinbackground.R;
 import com.github.paulononaka.installapkinbackground.utils.AppInstalledReceiver;
 import com.github.paulononaka.installapkinbackground.utils.AppUninstallReceiver;
 
 public class MainActivity extends Activity {
     public static final String TAG = "MainActivity";
-    Button btnInstall;
-    Button btnUninstall;
-    Button btnTestAmazon;
+    Button btnInstallActivity;
+    Button btnUninstallActivity;
+    Button btnDownloadActivity;
     AppInstalledReceiver appInstalledReceiver;
     AppUninstallReceiver appUninstallReceiver;
 
@@ -28,9 +28,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnInstall = (Button) findViewById(R.id.btnInstall);
-        btnUninstall = (Button) findViewById(R.id.btnUninstall);
-        btnTestAmazon = (Button) findViewById(R.id.btnTestAmazon);
+      //  btnInstallActivity = (Button) findViewById(R.id.btnInstallActivity);
+        btnUninstallActivity = (Button) findViewById(R.id.btnUninstallActivity);
+        btnDownloadActivity = (Button) findViewById(R.id.btnDownloadActivity);
 
 
         registerAppInstallReceiver();
@@ -49,22 +49,22 @@ public class MainActivity extends Activity {
                 }
             });
 
+//
+//            btnInstallActivity.setOnClickListener(new View.OnClickListener() {
+//
+//                @Override
+//                public void onClick(View arg0) {
+//
+//                    try {
+//                        runInstallActivity();
+//                       // am.installPackage("/sdcard/test.apk");
+//                    } catch (Exception e) {
+//                        logError(e);
+//                    }
+//                }
+//            });
 
-            btnInstall.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View arg0) {
-
-                    try {
-                        runInstallActivity();
-                       // am.installPackage("/sdcard/test.apk");
-                    } catch (Exception e) {
-                        logError(e);
-                    }
-                }
-            });
-
-            btnUninstall.setOnClickListener(new View.OnClickListener() {
+            btnUninstallActivity.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View arg0) {
 
@@ -77,12 +77,12 @@ public class MainActivity extends Activity {
                 }
             });
 
-            btnTestAmazon.setOnClickListener(new View.OnClickListener() {
+            btnDownloadActivity.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View arg0) {
 
                     try {
-                        runTestAmazonActivity();
+                        runDownloadActivity();
                     } catch (Exception e) {
                         logError(e);
                     }
@@ -104,8 +104,8 @@ public class MainActivity extends Activity {
         startActivity(new Intent(MainActivity.this, UninstallActivity.class));
     }
 
-    private void runTestAmazonActivity() {
-        startActivity(new Intent(MainActivity.this, ActivityTestAmazon.class));
+    private void runDownloadActivity() {
+        startActivity(new Intent(MainActivity.this, DownloadActivity.class));
     }
 
     private void registerAppInstallReceiver() {

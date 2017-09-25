@@ -93,9 +93,6 @@ public class UninstallActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-//        Intent intent = new Intent(Intent.ACTION_DELETE).setData(Uri.parse("package:" + packName));
-//        startActivity(intent);
     }
 
     private void refresh() {

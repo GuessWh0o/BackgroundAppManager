@@ -1,4 +1,4 @@
-package com.github.paulononaka.installapkinbackground;
+package com.github.paulononaka.installapkinbackground.interfaces;
 
 public interface OnInstalledPackaged {
 

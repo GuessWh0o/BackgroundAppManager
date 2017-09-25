@@ -1,4 +1,4 @@
-package com.github.paulononaka.installapkinbackground.utils;
+package com.github.paulononaka.installapkinbackground.interfaces;
 
 /**
  * Created by Maks on 8/17/2017.

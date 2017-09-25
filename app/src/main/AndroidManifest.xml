@@ -27,15 +27,19 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.UninstallActivity"></activity>
+        <activity android:name=".activities.UninstallActivity"/>
+        
+        <activity android:name=".activities.DownloadActivity"/>
+
+        <activity android:name=".activities.DownloadSelectionActivity"/>
 
         <activity
             android:name=".activities.DetailActivity"
-            android:label="@string/activity_title_detail"></activity>
+            android:label="@string/activity_title_detail"/>
 
         <activity
             android:name=".activities.InstallActivity"
-            android:label="Install APK"></activity>
+            android:label="Install APK"/>
 
         <activity
             android:name=".activities.EditActivity"
@@ -82,10 +86,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".activities.ActivityTestAmazon">
-        </activity>
-
 
         <!--R E C E I V E R S-->
 
@@ -93,7 +93,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_INSTALL" />
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
-
                 <data android:scheme="package" />
             </intent-filter>
         </receiver>

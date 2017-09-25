@@ -4,6 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion '25.0.0'
     defaultConfig {
+        multiDexEnabled false
         applicationId 'com.github.paulononaka.installapkinbackground'
         minSdkVersion 15
         targetSdkVersion 25

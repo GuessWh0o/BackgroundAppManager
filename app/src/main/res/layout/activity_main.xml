@@ -7,7 +7,7 @@
     android:weightSum="3">
 
     <Button
-        android:id="@+id/btnTestAmazon"
+        android:id="@+id/btnDownloadActivity"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -16,19 +16,19 @@
         android:background="#09b5ff"
         android:text="Test AMAZON" />
 
-    <Button
-        android:id="@+id/btnInstall"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:layout_weight="1"
-        android:background="@color/colorGreen"
-        android:text="Install" />
+    <!--<Button-->
+        <!--android:id="@+id/btnInstallActivity"-->
+        <!--android:layout_width="250dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_margin="20dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@color/colorGreen"-->
+        <!--android:text="Install" />-->
 
 
     <Button
-        android:id="@+id/btnUninstall"
+        android:id="@+id/btnUninstallActivity"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

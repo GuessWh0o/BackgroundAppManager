@@ -46,4 +46,14 @@
     <string name="label_new_password">New password</string>
     <string name="label_retype_password">Retype password</string>
     <string name="label_version">Version</string>
+    <string name="listBucketFiles">List Bucket Files</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="pause_all">Pause All</string>
+    <string name="cancel_all">Delete All</string>
+
+    <string name="refreshing">Refreshing</string>
+    <string name="please_wait">Please wait</string>
 </resources>
